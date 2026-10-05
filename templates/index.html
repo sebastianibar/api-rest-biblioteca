@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Biblioteca</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 40px; 
+            background-color: #f4f4f9; 
+        }
+        .container { 
+            display: flex; 
+            gap: 40px; 
+        }
+        .section { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            flex: 1; 
+        }
+        input, select, button { 
+            display: block; 
+            margin: 10px 0; 
+            padding: 8px; 
+            width: 90%; }
+        button { 
+            background-color: #28a745; 
+            color: white; 
+            border: none; 
+            cursor: pointer; }
+        button:hover { 
+            background-color: #218838; 
+        }
+        .btn-delete { 
+            background-color: #dc3545; padding: 4px 8px; margin-left: 10px; width: auto; display: inline; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Biblioteca API REST - Proyecto Final</h1>
+    
+    <div class="container">
+        <!-- Sección de Autores -->
+        <div class="section">
+            <h2>Autores</h2>
+            <ul id="lista-autores"></ul>
+            <h3>Agregar Autor</h3>
+            <input type="text" id="autor-nombre" placeholder="Nombre del autor">
+            <input type="text" id="autor-nac" placeholder="Nacionalidad">
+            <button onclick="agregarAutor()">Agregar Autor</button>
+        </div>
+
+        <!-- Sección de Libros -->
+        <div class="section">
+            <h2>Libros</h2>
+            <ul id="lista-libros"></ul>
+            <h3>Agregar Libro</h3>
+            <input type="text" id="libro-titulo" placeholder="Título del libro">
+            <input type="number" id="libro-anio" placeholder="Año de publicación">
+            <!-- El select se llenará dinámicamente con JS -->
+            <select id="libro-autor-id">
+                <option value="">Selecciona un Autor</option>
+            </select>
+            <button onclick="agregarLibro()">Agregar Libro</button>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JS -->
+    <script src="/static/script.js"></script>
+</body>
+</html>

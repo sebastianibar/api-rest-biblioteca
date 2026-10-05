@@ -1,0 +1,8 @@
+# Base de datos (se crea sola al ejecutar app.py)
+biblioteca.db
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
